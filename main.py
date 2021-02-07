@@ -3,11 +3,7 @@ from happiness import Happiness
 from hunger import Hunger
 import discord
 import os
-import random
-import threading
 from discord import client
-import requests
-import json
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -47,7 +43,6 @@ async def mood_handler(m_handler):
     await m_handler.send('Back to happy! (•ө•)♡')
   elif "how" in m_handler.content:
     await m_handler.send(round(happiness.happiness))
-    await m_handler.send
   elif "praise" in m_handler.content:
     happiness.add_happiness(20)
     await m_handler.send('Happiness reloaded! (　＾Θ＾)❤️')
